@@ -1,15 +1,20 @@
 # TO-DO: complete the helpe function below to merge 2 sorted arrays
 def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
-    merged_arr = [0] * elements
+    merged_arr = []
     # TO-DO
-    for i in merged_arr:
+    for i in range(elements):
         print(arrA,arrB)
-        print(arrA[0],arrB[0])
         print(merged_arr)
-        print(i)
-        i = min(arrA[0], arrB[0])
-        print(i, merged_arr)
+        if len(arrA):
+            if len(arrB):
+                merged_arr.append(min(arrA[0], arrB[0]))
+            else:
+                merged_arr.append(arrA[0])
+        else:
+                merged_arr.append(arrB[0])
+
+
         if merged_arr == arrA:
             arrA = arrA[1:]
         else:
@@ -23,8 +28,8 @@ def merge_sort( arr ):
     # TO-DO
     if len(arr) == 1:
         return arr;
-    x = arr[0:len(arr)//2]
-    y = arr[len(arr)//2:len(arr)]
+    x = arr[:len(arr)//2]
+    y = arr[len(arr)//2:]
     # print(x,y)
     merge(y,x)
 
@@ -51,4 +56,7 @@ def timsort( arr ):
 
 
 
-merge_sort([1,2,3,4,5,6,7,8,9])
+merge_sort([1,5,8,7,6,4,3,9,2])
+
+x = []
+print(len(x))
