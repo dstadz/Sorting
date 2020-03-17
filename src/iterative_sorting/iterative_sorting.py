@@ -29,10 +29,7 @@ def bubble_sort( arr ):
         if arr[i] > arr[i+1]:
             print('!!!', arr[i], arr[i+1])
             arr[i], arr[i+1] = arr[i+1], arr[i]
-            if i > 0:
-                i -= 1
-            else:
-                i = 0
+            i = 0
         else:
             i += 1
     print(arr)
